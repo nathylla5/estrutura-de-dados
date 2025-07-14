@@ -3,15 +3,16 @@ typedef struct pedido {
     char nomeDoCliente[50];
     char produto[50];
     char status[20]; // Ex: "Pendente", "Em Preparação", "Entregue"
-    char descricao[100];
+    char observacao[100];
     float preco;
     int quantidade;
     struct pedido *proximo;
 } Pedido;
 
-void fazerPedido();
-void adicionarPedido();
-void removerPedido();
-void atualizarStatusPedido();
-void verificarStatusPedido();
-void visualizarFila();
+void fazerPedido(); //para fazer (Grupo 1)
+void adicionarPedido(); //para fazer (Grupo 1)
+void atualizarStatusPedido(); //para fazer (Grupo 2)
+////////
+void verificarStatusPedido(); //para fazer (Grupo 2)
+void cancelarPedido(); //para fazer (Grupo 2)
+void visualizarFila(); //para fazer (Grupo 1)

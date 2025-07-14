@@ -1,6 +1,6 @@
-void inicializar();
+void inicializar(); //feito
 
-void menuCliente();
-void menuCardapio();
+void menuCliente(); //feito
+void menuCardapio(); //feito
 
-void menuAtendente();
+void menuAtendente(); //feito

@@ -37,6 +37,7 @@ void menuCliente() {
         printf("1. Fazer Pedido\n");
         printf("2. Visualizar cardápio\n");
         printf("3. Verificar status do pedido\n");
+        printf("4. Cancelar pedido\n");
         printf("0. Voltar ao menu principal\n");
         printf("-------------------------------\n");
         printf("Escolha uma opção: ");
@@ -52,6 +53,9 @@ void menuCliente() {
             case 3:
                 verificarStatusPedido();
                 break;
+            case 4:
+              cancelarPedido();
+              break;
             case 0:
                 printf("\nVoltando ao menu principal...\n\n");
                 inicializar();
@@ -69,6 +73,7 @@ void menuAtendente() {
         printf("\n------ MENU DO ATENDENTE ------\n");
         printf("1. Ver Fila de Pedidos\n");
         printf("2. Atualizar Status do Pedido\n");
+        printf("3. Cancelar pedido\n");
         printf("0. Voltar ao menu principal\n");
         printf("-------------------------------\n");
         printf("Escolha uma opção: ");
@@ -81,6 +86,9 @@ void menuAtendente() {
             case 2:
                 atualizarStatusPedido();
                 break;
+            case 3:
+              cancelarPedido();
+              break;
             case 0:
                 printf("\nVoltando ao menu principal...\n\n");
                 inicializar();
