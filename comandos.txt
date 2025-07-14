@@ -1,0 +1,6 @@
+- para compilar o código (o ifome é o nome do executável, você pode escolher outro nome):
+  gcc main.c funcionalidades.c pedido.c -o ifome
+- para executar o programa (se outro nome for escolhido, substitua ifome pelo nome escolhido):
+  ifome
+- para limpar a tela do terminal::
+  cls
