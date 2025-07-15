@@ -54,11 +54,11 @@ void menuCliente() {
                 verificarStatusPedido();
                 break;
             case 4:
-              cancelarPedido();
+               cancelarPedido();
               break;
             case 0:
                 printf("\nVoltando ao menu principal...\n\n");
-                inicializar();
+                return;
                 break;
             default:
                 printf("\nOpção inválida. Tente novamente.\n");
@@ -91,8 +91,7 @@ void menuAtendente() {
               break;
             case 0:
                 printf("\nVoltando ao menu principal...\n\n");
-                inicializar();
-                break;
+                return;
             default:
                 printf("\nOpção inválida. Tente novamente.\n");
                 menuAtendente();
@@ -125,8 +124,7 @@ void menuCardapio() {
             break;
         case 2:
             printf("\nVoltando ao menu do cliente...\n\n");
-            menuCliente();
-            break;
+            return;
         default:
             printf("\nOpção inválida.\n\n");
             break;
