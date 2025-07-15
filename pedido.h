@@ -7,12 +7,23 @@ typedef struct pedido {
     float preco;
     int quantidade;
     struct pedido *proximo;
+    float valorTotal;
 } Pedido;
 
-void fazerPedido(); //para fazer (Grupo 1)
-void adicionarPedido(); //para fazer (Grupo 1)
-void atualizarStatusPedido(); //para fazer (Grupo 2)
-////////
-void verificarStatusPedido(); //para fazer (Grupo 2)
-void cancelarPedido(); //para fazer (Grupo 2)
-void visualizarFila(); //para fazer (Grupo 1)
+typedef struct {
+    Pedido *inicio;
+    Pedido *fim;
+} Fila;
+
+typedef struct {
+    Pedido *topo;
+} Pilha;
+
+
+void fazerPedido();
+void adicionarPedido();
+void visualizarFila();
+void atualizarStatusPedido();
+void verificarStatusPedido();
+void cancelarPedido();
+void visualizarPedidosCancelados();

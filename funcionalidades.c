@@ -7,7 +7,8 @@ void inicializar() {
     int opcao;
     do {
         printf("Bem-vindo ao IFome!\n");
-        printf("\n1 - Sou cliente\n");
+        printf("-----------------------\n");
+        printf("1 - Sou cliente\n");
         printf("2 - Sou atendente\n");
         printf("0 - Sair\n");
         printf("\nEscolha uma opção: ");
@@ -21,10 +22,10 @@ void inicializar() {
                 menuAtendente();
                 break;
             case 0:
-                printf("\nSaindo do IFome... Até a próxima!\n");
+                printf("\nSaindo do IFome... Até a próxima!\n\n\n");
                 break;
             default:
-                printf("\nOpção inválida. Tente novamente.\n\n");
+                printf("\nOpção inválida. Tente novamente.\n\n\n");
                 break;
         }
     } while (opcao != 0);
@@ -34,13 +35,13 @@ void menuCliente() {
     int opcao;
     do {
         printf("\n------- MENU DO CLIENTE -------\n");
-        printf("1. Fazer Pedido\n");
+        printf("\n1. Fazer Pedido\n");
         printf("2. Visualizar cardápio\n");
         printf("3. Verificar status do pedido\n");
         printf("4. Cancelar pedido\n");
         printf("0. Voltar ao menu principal\n");
         printf("-------------------------------\n");
-        printf("Escolha uma opção: ");
+        printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
 
         switch (opcao) {
@@ -61,7 +62,7 @@ void menuCliente() {
                 return;
                 break;
             default:
-                printf("\nOpção inválida. Tente novamente.\n");
+                printf("\nOpcao invalida. Tente novamente.\n");
                 break;
         }
     } while (opcao != 0);
@@ -71,12 +72,13 @@ void menuAtendente() {
     int opcao;
     do {
         printf("\n------ MENU DO ATENDENTE ------\n");
-        printf("1. Ver Fila de Pedidos\n");
+        printf("\n1. Ver Fila de Pedidos\n");
         printf("2. Atualizar Status do Pedido\n");
         printf("3. Cancelar pedido\n");
+        printf("4. Visualizar pedidos cancelados\n");
         printf("0. Voltar ao menu principal\n");
         printf("-------------------------------\n");
-        printf("Escolha uma opção: ");
+        printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
 
         switch (opcao) {
@@ -89,11 +91,14 @@ void menuAtendente() {
             case 3:
               cancelarPedido();
               break;
+            case 4: 
+              visualizarPedidosCancelados();
+              break;
             case 0:
                 printf("\nVoltando ao menu principal...\n\n");
                 return;
             default:
-                printf("\nOpção inválida. Tente novamente.\n");
+                printf("\nOpcao invalida. Tente novamente.\n");
                 menuAtendente();
                 break;
         }
@@ -102,20 +107,20 @@ void menuAtendente() {
 
 void menuCardapio() {
     printf("\nCARDÁPIO\n");
-    printf("\nIFMestre -> Um hambúrguer gigante para quem domina o assunto\n");
-    printf("IFBásico -> O clássico, sempre saboroso e confiável\n");
-    printf("IFCalouro -> O menor do cardápio, mas com muito potencial\n");
-    printf("IFTCC -> Demora, mas vale a pena! (hambúrguer duplo e caprichado)\n");
+    printf("\nIFMestre -> Um hamburguer gigante para quem domina o assunto\n");
+    printf("IFBásico -> O classico, sempre saboroso e confiavel\n");
+    printf("IFCalouro -> O menor do cardapio, mas com muito potencial\n");
+    printf("IFTCC -> Demora, mas vale a pena! (hamburguer duplo e caprichado)\n");
     printf("IFCompleto -> O combo perfeito, com batata frita e refrigerante\n");
     printf("IFRecesso -> Leve e delicioso, perfeito para uma pausa\n");
-    printf("IFMat -> Para os fortes! (hambúrguer apimentado, inspirado na matemática)\n");
+    printf("IFMat -> Para os fortes! (hamburguer apimentado, inspirado na matematica)\n");
     printf("\n");
 
     int opcao;
     printf("\nDeseja fazer seu pedido?\n");
     printf("1. Sim\n");
-    printf("2. Não\n");
-    printf("\nEscolha uma opção: ");
+    printf("2. Nao\n");
+    printf("\nEscolha uma opcao ");
     scanf("%d", &opcao);
 
     switch (opcao) {
@@ -126,7 +131,7 @@ void menuCardapio() {
             printf("\nVoltando ao menu do cliente...\n\n");
             return;
         default:
-            printf("\nOpção inválida.\n\n");
+            printf("\nOpcao invalida.\n\n");
             break;
     }
 }
